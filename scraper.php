@@ -13,7 +13,7 @@ require 'scraperwiki/simple_html_dom.php';
 	if($page)
 	{	
 		sleep(5);
-		echo "Scraper Inprogress don't stop";
+		
 		$link	=	'https://indiankanoon.org/'.$page;
 		$pageofyears	=	file_get_html($link);
 		foreach($pageofyears->find("/html/body/div[2]/table/tbody/tr/td/div[@class='browselist']")as $year)
@@ -49,7 +49,7 @@ require 'scraperwiki/simple_html_dom.php';
 					
 					if (!$checkerprofile) 
 								{
-									echo "$pagetext...\n";
+									echo "Scraper Inprogress don't stop -> $pagetext\n";
 									$RecordFlag =   false;
 									break;
 								}			
