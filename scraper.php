@@ -12,6 +12,7 @@ require 'scraperwiki/simple_html_dom.php';
 	
 	if($page)
 	{	
+		sleep(5);
 		echo "Scraper Inprogress don't stop";
 		$link	=	'https://indiankanoon.org/'.$page;
 		$pageofyears	=	file_get_html($link);
